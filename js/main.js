@@ -17,4 +17,21 @@ $(document).ready(function () {
             pauseOnFocus: true
         });
     }
+
+    var $header = $('.header');
+    var scrollThreshold = 50;
+
+    function toggleHeaderScroll() {
+        if ($(window).scrollTop() > scrollThreshold) {
+            $header.addClass('header--scrolled');
+        } else {
+            $header.removeClass('header--scrolled');
+        }
+    }
+
+    toggleHeaderScroll();
+
+    $(window).on('scroll', function () {
+        toggleHeaderScroll();
+    });
 });
