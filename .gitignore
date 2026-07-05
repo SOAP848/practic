@@ -1,0 +1,152 @@
+# --- ОС — Windows ---
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# --- ОС — macOS ---
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# --- ОС — Linux ---
+*.swp
+*.swo
+*~
+.directory
+
+# --- IDE / Редакторы ---
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.komodoproject
+*.komodotools
+.netbeans/
+nbproject/
+.settings/
+.project
+.classpath
+.buildpath
+*.code-workspace
+
+# --- PHP (общее) ---
+*.log
+*.err
+error_log
+php_errors.log
+php_error.log
+
+# --- Composer ---
+/vendor/
+composer.lock
+composer.phar
+.php_cs.cache
+.phpunit.result.cache
+.phpunit.cache/
+
+# --- Laravel / MVC-фреймворки ---
+.env
+.env.*
+!.env.example
+storage/framework/cache/data/*
+storage/framework/sessions/*
+storage/framework/views/*
+storage/logs/*
+storage/debugbar/*
+bootstrap/cache/*
+public/storage
+public/hot
+public/build/manifest.json
+
+# --- Symfony ---
+/var/
+/var/cache/*
+/var/log/*
+/var/sessions/*
+!var/cache/.gitkeep
+!var/log/.gitkeep
+!var/sessions/.gitkeep
+/.env.local
+/.env.local.php
+/.env.*.local
+/config/secrets/*/prod/
+/config/secrets/*/prod
+
+# --- SQL / Базы данных ---
+*.sql
+*.sqlite
+*.sqlite3
+*.db
+*.db3
+*.mdb
+*.accdb
+*.frm
+*.ibd
+*.myi
+*.myd
+*.ldb
+*.sdf
+*.dbf
+*.log
+mysql-bin.*
+binlog.*
+ib_logfile*
+ibdata*
+ibtmp*
+
+# --- Node / NPM (если понадобится для фронта) ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+yarn.lock
+package-lock.json
+.pnpm-debug.log*
+
+# --- Ассеты / Сборка ---
+/dist/
+/build/
+/public/build/
+*.min.js
+*.min.css
+*.map
+
+# --- Документы / Временные файлы ---
+*.docx
+*.doc
+~$*.docx
+~$*.doc
+*.pdf
+*.xlsx
+*.xls
+*.pptx
+*.ppt
+*.csv
+*.zip
+*.rar
+*.7z
+*.tar.gz
+*.tgz
+*.bak
+*.backup
+*.tmp
+*.temp
+
+# --- Docker ---
+.docker/
+docker-compose.override.yml
+.env.docker
+
+# --- Прочее ---
+.DS_Store
+*.local
