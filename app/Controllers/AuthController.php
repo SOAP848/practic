@@ -28,8 +28,6 @@ class AuthController extends BaseController
             return;
         }
 
-        // Сохраняем авторизацию в сессии
-        session_start();
         $_SESSION['user_id']    = $user['id'];
         $_SESSION['user_email'] = $user['email'];
         $_SESSION['user_name']  = $user['fullname'];
@@ -89,8 +87,6 @@ class AuthController extends BaseController
             'phone'    => $phone,
         ]);
 
-        // Автоматическая авторизация после регистрации
-        session_start();
         $_SESSION['user_id']    = $userId;
         $_SESSION['user_email'] = $email;
         $_SESSION['user_name']  = $fullname;
@@ -99,7 +95,7 @@ class AuthController extends BaseController
             'id'    => $userId,
             'email' => $email,
             'name'  => $fullname,
-        ], 'Registration successful', 201);
+        ], 'Registration successful');
     }
 
     /**
@@ -107,8 +103,6 @@ class AuthController extends BaseController
      */
     public function check(array $params = []): void
     {
-        session_start();
-
         if (isset($_SESSION['user_id'])) {
             $this->success([
                 'id'    => $_SESSION['user_id'],
@@ -125,7 +119,6 @@ class AuthController extends BaseController
      */
     public function logout(array $params = []): void
     {
-        session_start();
         session_destroy();
         $this->success(null, 'Logged out');
     }

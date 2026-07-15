@@ -20,12 +20,14 @@ if ($basePath !== '/' && $basePath !== '.') {
         $requestUri = substr($requestUri, strlen($basePath));
     }
 }
-$isApiRequest = (strpos($requestUri, '/api/') !== false);
+$normalizedUri = trim($requestUri, '/');
+$isApiRequest = strpos($normalizedUri, 'api/') === 0 || $normalizedUri === 'api';
 
 $router = new Router();
 $router->dispatch();
 
-
-if (!$isApiRequest) {
-    require_once __DIR__ . '/index.html';
+if ($isApiRequest) {
+    exit;
 }
+
+require_once __DIR__ . '/index.html';
