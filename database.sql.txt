@@ -1,0 +1,103 @@
+
+CREATE DATABASE IF NOT EXISTS `hungry_people` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE `hungry_people`;
+
+
+CREATE TABLE IF NOT EXISTS `static` (
+    `id` INT AUTO_INCREMENT PRIMARY KEY,
+    `section` VARCHAR(50) NOT NULL COMMENT 'Идентификатор раздела (about, team, events)',
+    `title` VARCHAR(255) NOT NULL,
+    `subtitle` VARCHAR(255) DEFAULT NULL,
+    `text` TEXT,
+    `image` VARCHAR(255) DEFAULT NULL,
+    `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+INSERT INTO `static` (`section`, `title`, `subtitle`, `text`, `image`) VALUES
+('about', 'About Us', 'Restaurant', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus neque congue non egestas erat habitant faucibus quisque. Nunc nisl ipsum convallis massa odio cursus mattis facilisis vitae.', 'image2.jpg'),
+('team', 'Master Chef', 'Our Team', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus neque congue non egestas erat habitant faucibus quisque. Nunc nisl ipsum convallis massa odio cursus mattis facilisis vitae.', 'image3.jpg'),
+('events', 'Private Events', 'Weddings & Private Parties', 'For private events please call: +40 729 131 637 / +40 726 458 782 or use the contact form.', 'image8.jpg');
+
+
+CREATE TABLE IF NOT EXISTS `specialities` (
+    `id` INT AUTO_INCREMENT PRIMARY KEY,
+    `title` VARCHAR(255) NOT NULL,
+    `subtitle` VARCHAR(255) DEFAULT NULL,
+    `text` TEXT,
+    `image` VARCHAR(255) DEFAULT NULL,
+    `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+INSERT INTO `specialities` (`title`, `subtitle`, `text`, `image`) VALUES
+('Chocolate Pancakes', 'Specialties', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.', 'image7.jpg'),
+('Salad', 'Specialties', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.', 'salad.jpg'),
+('Steak', 'Specialties', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.', 'steak.png');
+
+
+CREATE TABLE IF NOT EXISTS `menu` (
+    `id` INT AUTO_INCREMENT PRIMARY KEY,
+    `title` VARCHAR(255) NOT NULL,
+    `subtitle` VARCHAR(255) DEFAULT NULL,
+    `price` DECIMAL(10,2) NOT NULL,
+    `category` VARCHAR(50) NOT NULL,
+    `on_main` TINYINT(1) DEFAULT 1,
+    `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+INSERT INTO `menu` (`title`, `subtitle`, `price`, `category`, `on_main`) VALUES
+('Desert Desert Desert', 'SD Integer ullamcorper neque eu purus euismod', 48.99, 'desert', 1),
+('Wine Wine Wine', 'SD Integer ullamcorper neque eu purus euismod', 39.55, 'wine', 1),
+('Beer Beer Beer', 'SD Integer ullamcorper neque eu purus euismod', 29.99, 'beer', 1),
+('Drinks Drinks Drinks', 'SD Integer ullamcorper neque eu purus euismod', 18.50, 'drinks', 1),
+('Soupe Soupe Soupe', 'SD Integer ullamcorper neque eu purus euismod', 22.00, 'soupe', 1),
+('Pasta Pasta Pasta', 'SD Integer ullamcorper neque eu purus euismod', 35.75, 'pasta', 1),
+('Pizza Pizza Test', 'SD Integer ullamcorper neque eu purus euismod', 98.56, 'pizza', 1),
+('Wine Wine Wine 2', 'SD Integer ullamcorper neque eu purus euismod', 39.55, 'wine', 1),
+('Beer Beer Beer 2', 'SD Integer ullamcorper neque eu purus euismod', 29.99, 'beer', 1),
+('Chocolate Cake', 'SD Integer ullamcorper neque eu purus euismod', 32.00, 'desert', 1),
+('Margherita Pizza', 'SD Integer ullamcorper neque eu purus euismod', 45.00, 'pizza', 1),
+('Pepperoni Pizza', 'SD Integer ullamcorper neque eu purus euismod', 52.00, 'pizza', 1),
+('Minestrone Soupe', 'SD Integer ullamcorper neque eu purus euismod', 16.50, 'soupe', 1),
+('Tomato Soupe', 'SD Integer ullamcorper neque eu purus euismod', 14.00, 'soupe', 1),
+('Lemonade', 'SD Integer ullamcorper neque eu purus euismod', 8.50, 'drinks', 1),
+('Coca Cola', 'SD Integer ullamcorper neque eu purus euismod', 5.00, 'drinks', 1),
+('Spaghetti Carbonara', 'SD Integer ullamcorper neque eu purus euismod', 42.00, 'pasta', 1),
+('Fettuccine Alfredo', 'SD Integer ullamcorper neque eu purus euismod', 38.00, 'pasta', 1),
+('Red Wine', 'SD Integer ullamcorper neque eu purus euismod', 45.00, 'wine', 1),
+('White Wine', 'SD Integer ullamcorper neque eu purus euismod', 40.00, 'wine', 1),
+('IPA Beer', 'SD Integer ullamcorper neque eu purus euismod', 12.00, 'beer', 1);
+
+
+CREATE TABLE IF NOT EXISTS `users` (
+    `id` INT AUTO_INCREMENT PRIMARY KEY,
+    `fullname` VARCHAR(255) NOT NULL,
+    `email` VARCHAR(255) NOT NULL UNIQUE,
+    `password` VARCHAR(255) NOT NULL,
+    `phone` VARCHAR(50) DEFAULT NULL,
+    `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+
+CREATE TABLE IF NOT EXISTS `bookings` (
+    `id` INT AUTO_INCREMENT PRIMARY KEY,
+    `name` VARCHAR(255) NOT NULL,
+    `email` VARCHAR(255) NOT NULL,
+    `phone` VARCHAR(50) NOT NULL,
+    `guests` VARCHAR(50) DEFAULT NULL,
+    `date` DATE DEFAULT NULL,
+    `time` TIME DEFAULT NULL,
+    `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS `contacts` (
+    `id` INT AUTO_INCREMENT PRIMARY KEY,
+    `name` VARCHAR(255) NOT NULL,
+    `email` VARCHAR(255) NOT NULL,
+    `phone` VARCHAR(50) DEFAULT NULL,
+    `message` TEXT NOT NULL,
+    `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
