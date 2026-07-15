@@ -1,0 +1,13 @@
+{
+    "name": "hungry-people/restaurant",
+    "description": "Restaurant website - Hungry People",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "require": {
+        "php": ">=7.4"
+    }
+}
