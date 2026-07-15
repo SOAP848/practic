@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
     <link rel="stylesheet" href="css/style.css">
+    <!-- Yandex Maps API -->
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=d76b5519-e9ad-4b43-8db7-e4e56414f601" type="text/javascript"></script>
 </head>
 <body class="page">
 
@@ -95,16 +97,15 @@
         </a>
     </section>
 
-    <!-- About Us -->
+    <!-- About Us (данные из БД) -->
     <section class="about section section--light" id="about">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 about__text">
                     <h2 class="section__title">About Us</h2>
                     <div class="section__divider"></div>
-                    <p class="about__lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus neque congue non egestas erat habitant faucibus quisque. Nunc nisl ipsum convallis massa odio cursus mattis facilisis vitae.</p>
-                    <p class="about__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus neque congue non egestas erat habitant faucibus quisque. Nunc nisl ipsum convallis massa odio cursus mattis facilisis vitae.</p>
-                    <p class="about__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus neque congue non egestas erat habitant faucibus quisque. Nunc nisl ipsum convallis massa odio cursus mattis facilisis vitae.</p>
+                    <p class="about__lead"></p>
+                    <p class="about__desc"></p>
                 </div>
                 <div class="col-lg-6 about__image-wrap">
                     <div class="image-frame">
@@ -116,7 +117,7 @@
         </div>
     </section>
 
-    <!-- Our Team / Master Chef -->
+    <!-- Our Team / Master Chef (данные из БД) -->
     <section class="team section section--dark" id="team">
         <div class="container">
             <div class="row align-items-center">
@@ -129,8 +130,8 @@
                 <div class="col-lg-6 order-lg-2 order-1 team__text">
                     <h2 class="section__title section__title--light">Master Chef</h2>
                     <div class="section__divider"></div>
-                    <p class="team__lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus neque congue non egestas erat habitant faucibus quisque. Nunc nisl ipsum convallis massa odio cursus mattis facilisis vitae.</p>
-                    <p class="team__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus neque congue non egestas erat habitant faucibus quisque. Nunc nisl ipsum convallis massa odio cursus mattis facilisis vitae.</p>
+                    <p class="team__lead"></p>
+                    <p class="team__desc"></p>
                 </div>
             </div>
         </div>
@@ -179,72 +180,22 @@
             <p class="booking__info">Mon - Fri: 8PM - 10PM, Sat - Sun: 8PM - 3AM, Phone: +40 729 131 637/+40 726 458 782</p>
         </div>
     </section>
- <!-- Главное не забыть доработать, добавить по меньшей мере еще 2 блюда, может добавить для карусели некий таймер?!!! -->
-    <!-- Specialties -->
+
+    <!-- Specialties (данные из БД) -->
     <section class="specialties section section--overlay" id="specialties">
         <div class="specialties__bg"></div>
         <div class="specialties__overlay"></div>
         <div class="container specialties__container">
             <p class="specialties__label">Specialties</p>
-                                            <span class="image-frame__border__specialities image-frame__border--left"></span>
+            <span class="image-frame__border__specialities image-frame__border--left"></span>
             <div class="specialties__slider">
-                <div class="specialties__slide">
-                    <div class="row align-items-center">
-                        <div class="col-lg-6">
-                            <div class="image-frame">
-                                <img class="image-frame__img" src="images/image7.jpg" alt="Chocolate Pancakes">
-
-                            </div>
-                        </div>
-                        <div class="col-lg-6 specialties__content">
-                            <h3 class="specialties__title">Chocolate Pancakes</h3>
-                            <div class="section__divider"></div>
-                            <p class="specialties__lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.</p>
-                            <p class="specialties__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="specialties__slide">
-                    <div class="row align-items-center">
-                        <div class="col-lg-6">
-                            <div class="image-frame">
-                                <img class="image-frame__img" src="images/salad.jpg" alt="Salad">
-
-                            </div>
-                        </div>
-                        <div class="col-lg-6 specialties__content">
-                            <h3 class="specialties__title">Salad</h3>
-                            <div class="section__divider"></div>
-                            <p class="specialties__lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.</p>
-                            <p class="specialties__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="specialties__slide">
-                    <div class="row align-items-center">
-                        <div class="col-lg-6">
-                            <div class="image-frame">
-                                <img class="image-frame__img" src="images/steak.png" alt="Steak">
-
-                            </div>
-                        </div>
-                        <div class="col-lg-6 specialties__content">
-                            <h3 class="specialties__title">Steak</h3>
-                            <div class="section__divider"></div>
-                            <p class="specialties__lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.</p>
-                            <p class="specialties__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.</p>
-                        </div>
-                    </div>
-                </div>
+                <!-- Слайды загружаются из БД через JS -->
             </div>
-
             <div class="specialties__dots"></div>
         </div>
     </section>
-  <!-- Главное не забыть доработать, когда сделаю mysql убрать заглушки и вставить реальные блюда!!! -->
-    <!-- Delicious Menu -->
+
+    <!-- Delicious Menu (данные из БД) -->
     <section class="menu section section--light" id="menu">
         <div class="container">
             <h2 class="section__title text-center">Delicious Menu</h2>
@@ -263,103 +214,30 @@
             </ul>
 
             <div class="menu__grid row">
-                <div class="col-md-4 menu__item" data-category="desert">
-                    <div class="menu__dish">
-                        <span class="menu__dish-name">Desert Desert Desert</span>
-                        <span class="menu__dish-dots"></span>
-                        <span class="menu__dish-price">48.99 USD</span>
-                    </div>
-                    <p class="menu__dish-desc">SD Integer ullamcorper neque eu purus euismod</p>
-                </div>
-                <div class="col-md-4 menu__item" data-category="wine">
-                    <div class="menu__dish">
-                        <span class="menu__dish-name">Wine Wine Wine</span>
-                        <span class="menu__dish-dots"></span>
-                        <span class="menu__dish-price">39.55 USD</span>
-                    </div>
-                    <p class="menu__dish-desc">SD Integer ullamcorper neque eu purus euismod</p>
-                </div>
-                <div class="col-md-4 menu__item" data-category="beer">
-                    <div class="menu__dish">
-                        <span class="menu__dish-name">Beer Beer Beer</span>
-                        <span class="menu__dish-dots"></span>
-                        <span class="menu__dish-price">29.99 USD</span>
-                    </div>
-                    <p class="menu__dish-desc">SD Integer ullamcorper neque eu purus euismod</p>
-                </div>
-                <div class="col-md-4 menu__item" data-category="drinks">
-                    <div class="menu__dish">
-                        <span class="menu__dish-name">Drinks Drinks Drinks</span>
-                        <span class="menu__dish-dots"></span>
-                        <span class="menu__dish-price">18.50 USD</span>
-                    </div>
-                    <p class="menu__dish-desc">SD Integer ullamcorper neque eu purus euismod</p>
-                </div>
-                <div class="col-md-4 menu__item" data-category="soupe">
-                    <div class="menu__dish">
-                        <span class="menu__dish-name">Soupe Soupe Soupe</span>
-                        <span class="menu__dish-dots"></span>
-                        <span class="menu__dish-price">22.00 USD</span>
-                    </div>
-                    <p class="menu__dish-desc">SD Integer ullamcorper neque eu purus euismod</p>
-                </div>
-                <div class="col-md-4 menu__item" data-category="pasta">
-                    <div class="menu__dish">
-                        <span class="menu__dish-name">Pasta Pasta Pasta</span>
-                        <span class="menu__dish-dots"></span>
-                        <span class="menu__dish-price">35.75 USD</span>
-                    </div>
-                    <p class="menu__dish-desc">SD Integer ullamcorper neque eu purus euismod</p>
-                </div>
-                <div class="col-md-4 menu__item" data-category="pizza">
-                    <div class="menu__dish">
-                        <span class="menu__dish-name">Pizza Pizza Test</span>
-                        <span class="menu__dish-dots"></span>
-                        <span class="menu__dish-price">98.56 USD</span>
-                    </div>
-                    <p class="menu__dish-desc">SD Integer ullamcorper neque eu purus euismod</p>
-                </div>
-                <div class="col-md-4 menu__item" data-category="wine">
-                    <div class="menu__dish">
-                        <span class="menu__dish-name">Wine Wine Wine</span>
-                        <span class="menu__dish-dots"></span>
-                        <span class="menu__dish-price">39.55 USD</span>
-                    </div>
-                    <p class="menu__dish-desc">SD Integer ullamcorper neque eu purus euismod</p>
-                </div>
-                <div class="col-md-4 menu__item" data-category="beer">
-                    <div class="menu__dish">
-                        <span class="menu__dish-name">Beer Beer Beer</span>
-                        <span class="menu__dish-dots"></span>
-                        <span class="menu__dish-price">29.99 USD</span>
-                    </div>
-                    <p class="menu__dish-desc">SD Integer ullamcorper neque eu purus euismod</p>
-                </div>
+                <!-- Блюда загружаются из БД через JS -->
             </div>
         </div>
     </section>
 
-    <!-- Private Events -->
+    <!-- Private Events (данные из БД) -->
     <section class="events section section--overlay" id="events">
         <div class="events__bg"></div>
         <div class="events__overlay"></div>
         <div class="container events__container">
             <p class="events__label">Private Events</p>
-            <p class="events__info">For private events please call: +40 729 131 637/+40 726 458 782 or use the contact form.</p>
+            <p class="events__info"></p>
             <span class="image-frame__border__gallery_left image-frame__border--left"></span>
             <span class="image-frame__border__gallery_right image-frame__border--right"></span>
             <div class="row events__cards">
                 <div class="col-md-6 events__card-wrap">
                     <div class="events__card">
                         <img class="events__card-img" src="images/image8.jpg" alt="Weddings">
-
                         <span class="events__card-label events__card-label--right">Weddings</span>
                     </div>
                 </div>
                 <div class="col-md-6 events__card-wrap">
                     <div class="events__card">
                         <img class="events__card-img" src="images/image9.jpg" alt="Private Parties">
-
                         <span class="events__card-label events__card-label--left">Private Parties</span>
                     </div>
                 </div>
@@ -424,14 +302,7 @@
 
     <!-- Map -->
     <section class="map" id="map">
-        <div class="map__container" id="yandexMap">
-            <iframe
-                class="map__iframe"
-                src="https://yandex.ru/map-widget/v1/?um=constructor%3Aplaceholder&amp;source=constructor"
-                title="Restaurant location"
-                allowfullscreen>
-            </iframe>
-        </div>
+        <div class="map__container" id="yandexMap" style="width:100%; height:400px;"></div>
     </section>
 
     <!-- Footer -->
@@ -471,7 +342,7 @@
                 </div>
 
                 <div class="auth-modal__body auth-modal__panel" data-panel="signup">
-                    <h3 class="auth-modal__title">Login</h3>
+                    <h3 class="auth-modal__title">Sign Up</h3>
                     <form class="auth-modal__form" id="signupForm">
                         <label class="auth-modal__label">Full Name</label>
                         <input class="auth-modal__input" type="text" name="fullname" required>
@@ -496,5 +367,36 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        // Инициализация Yandex карты с адресом ресторана
+        ymaps.ready(function () {
+            var restaurantCoords = [51.5074, -0.1278];
+
+            var map = new ymaps.Map('yandexMap', {
+                center: restaurantCoords,
+                zoom: 15,
+                controls: ['zoomControl', 'geolocationControl', 'searchControl']
+            });
+
+            var placemark = new ymaps.Placemark(restaurantCoords, {
+                hintContent: 'Hungry People Restaurant',
+                balloonContent: '<strong>Hungry People Restaurant</strong><br>5th London Boulevard, London, U.K.'
+            }, {
+                preset: 'islands#icon',
+                iconColor: '#f1c40f'
+            });
+
+            map.geoObjects.add(placemark);
+
+            ymaps.geocode('5th London Boulevard, London, UK').then(function (res) {
+                var firstGeoObject = res.geoObjects.get(0);
+                if (firstGeoObject) {
+                    var coords = firstGeoObject.geometry.getCoordinates();
+                    map.setCenter(coords, 15);
+                    placemark.geometry.setCoordinates(coords);
+                }
+            });
+        });
+    </script>
 </body>
 </html>
