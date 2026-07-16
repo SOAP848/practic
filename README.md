@@ -2,27 +2,6 @@
 
 Веб-сайт ресторана "Hungry People" с адаптивной вёрсткой, PHP MVC backend и MySQL базой данных.
 
-## Функциональность
-
-- **Главное меню** — якорные ссылки на разделы, фиксация при скролле, уменьшение логотипа
-- **Hero-секция** — кнопки-якоря "Book Table" и "Explore"
-- **About Us / Our Team / Private Events** — статичный контент из БД
-- **Book a Table** — форма бронирования с AJAX-отправкой и email-уведомлением
-- **Specialties** — слайдер контента (Slick Carousel) с данными из БД
-- **Delicious Menu** — сетка блюд из БД (до 21 элемента), фильтрация по категориям
-- **Contact** — форма обратной связи с AJAX-отправкой
-- **Yandex Карта** — расположение ресторана
-- **Авторизация/Регистрация** — модальное окно, AJAX, сессии PHP
-- **Социальные сети** — ссылки с `target="_blank"`
-- **Адаптивность** — Bootstrap 4 + БЭМ
-
-## Технологии
-
-- **Frontend:** HTML5, CSS3, Bootstrap 4, jQuery, Slick Carousel, Yandex Maps API
-- **Backend:** PHP 8.1, MVC (Model-View-Controller), PDO
-- **База данных:** MySQL 8.0
-- **Инфраструктура:** Docker, Composer
-
 ## Структура проекта
 
 ```
@@ -41,8 +20,6 @@ hungry-people/
 ├── .htaccess              # Rewrite rules для Apache
 ├── composer.json          # PSR-4 автозагрузка
 ├── database.sql.txt       # SQL-дамп БД
-├── docker-compose.yml     # Docker Compose
-├── Dockerfile             # Docker образ
 ├── index.html             # Главная страница
 ├── index.php              # Front Controller (MVC)
 └── README.md              # Этот файл
